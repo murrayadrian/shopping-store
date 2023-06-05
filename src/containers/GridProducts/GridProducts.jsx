@@ -120,6 +120,7 @@ const GridContainer = styled.div`
   display: grid;
   grid-template-columns: auto auto auto auto;
   column-gap: 20px;
+  row-gap: 30px;
 `
 const FilterButton = styled.div`
   display: flex;

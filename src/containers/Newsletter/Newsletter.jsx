@@ -26,7 +26,7 @@ export const Newsletter = () => {
             <img src={topimg} alt=""/>
           </ProductImage>
         </GridContainer>
-        <h4>@lisa.official</h4>
+        <h4>@vinh.official</h4>
       </StyledNewsletter>
     )
 }
