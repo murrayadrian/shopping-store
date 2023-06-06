@@ -1,3 +1,3 @@
-import {Card} from "./Card"
-import {CardContainer} from "./CardContainer"
-export {Card, CardContainer}
+import { CardBanner } from "./Card"
+import { CardProduct } from "./Card"
+export {CardBanner, CardProduct}

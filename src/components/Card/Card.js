@@ -1,48 +1,44 @@
-import React from 'react'
 import styled from 'styled-components'
+import { StyledPopup } from './Popup'
+import { CardBottom } from "./CardBottom"
+import { SaleStatus } from "./SaleStatus"
+import { Popup } from "./Popup"
 
-const Status = styled.div`
-  position: absolute;
-  top: 20px;
-  left: 0;
-  button {
-    background-color: black;
-    color: white;
-    padding: 2px 8px;
-  }
-`
-const Popup = styled.div`
-  position: absolute;
-  display: none;
-  bottom: 0;
-  left: 0;
-  justify-content: space-between;
-  background-color: black;
-  color: white;
-  padding: 16px 12px;
-  width: 100%;
-`
-const ImageWrapper = styled.div`
-  width: ${props => props.width}px;
-  height: ${props => props.height}px;
-  position: relative;
-  background-image: url(${props=>props.img});
-  background-size: cover;
-  background-repeat: no-repeat;
-  &:hover ${Popup} {
-    display: flex;
-  }
-`
-export const Card = ({ width, height, img, isSale }) => {
+
+export const CardBanner = ({ product }) => {
   return (
-      <ImageWrapper width={width} height={height} img={img}>
-        <Status>
-          {isSale && <button>SALE</button>}
-        </Status>
-        <Popup>
-          <div>Pant</div>
-          <div>200 Product</div>
-        </Popup>
-      </ImageWrapper>
+    <StyledCard>
+      <img src={product.image} alt="img" />
+      <SaleStatus isSale={product.isSale} />
+      <Popup name={product.name} qty={product.qty} />
+    </StyledCard>
   )
 }
+
+export const CardProduct = ({ product }) => {
+  return (
+    <SCardProduct>
+      <StyledCard>
+        <img src={product.image} alt="img" />
+        <SaleStatus isSale={product.isSale} />
+        <Popup />
+      </StyledCard>
+      <CardBottom product={product} />
+    </SCardProduct>
+  )
+}
+
+const StyledCard = styled.div`
+  position: relative;
+  &:hover ${StyledPopup} {
+    display: flex;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+`
+const SCardProduct = styled.div`
+  display: flex;
+  flex-direction: column;
+`

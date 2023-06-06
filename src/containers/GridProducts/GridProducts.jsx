@@ -2,104 +2,46 @@ import styled from "styled-components"
 import { v } from "styles/variables"
 import icon from "assets/filter-icon.svg"
 import topimg from "assets/top-img.jpg"
+import { GridContainer } from "components/Common"
+import { CardProduct } from "components/Card"
+
+
+const product = {
+  id: 1,
+  image: topimg,
+  name: "Adicolor Classics Joggers",
+  category: "Dress",
+  price: 53,
+  qty: 50,
+  details : {
+    desc: "asdfdsgfdsfdsf",
+    tag: "hot",
+    tooltip: "hover meeeee"
+  }
+}
+
+
 export const GridProducts = () => {
   return (
     <StyledGridProducts>
       <h2>Or subscribe to the newsletter</h2>
       <FilterWrapper>
-        <GridContainer>
+        <GridContainer size={4} columngap={20} rowgap={30}>
           <div>All products</div>
           <div>T-shirt</div>
           <div>Hoodies</div>
           <div>Jacket</div>
         </GridContainer>
         <FilterButton>
-          <img src={icon} alt="img"/>
+          <img src={icon} alt="img" />
           <div>Filter</div>
         </FilterButton>
       </FilterWrapper>
-      <GridContainer>
-        <Card>
-          <TopProduct>
-            <img src={topimg} alt=""/>
-          </TopProduct>
-          <Title>Adicolor Classics Joggers</Title>
-          <BottomProduct>
-              <p>Dress</p>
-              <p>$53.85</p>
-          </BottomProduct>
-        </Card>
-        <Card>
-          <TopProduct>
-            <img src={topimg} alt=""/>
-          </TopProduct>
-          <Title>Adicolor Classics Joggers</Title>
-          <BottomProduct>
-              <p>Dress</p>
-              <p>$53.85</p>
-          </BottomProduct>
-        </Card>
-        <Card>
-          <TopProduct>
-            <img src={topimg} alt=""/>
-          </TopProduct>
-          <Title>Adicolor Classics Joggers</Title>
-          <BottomProduct>
-              <p>Dress</p>
-              <p>$53.85</p>
-          </BottomProduct>
-        </Card>
-        <Card>
-          <TopProduct>
-            <img src={topimg} alt=""/>
-          </TopProduct>
-          <Title>Adicolor Classics Joggers</Title>
-          <BottomProduct>
-              <p>Dress</p>
-              <p>$53.85</p>
-          </BottomProduct>
-        </Card>
-        <Card>
-          <TopProduct>
-            <img src={topimg} alt=""/>
-          </TopProduct>
-          <Title>Adicolor Classics Joggers</Title>
-          <BottomProduct>
-              <p>Dress</p>
-              <p>$53.85</p>
-          </BottomProduct>
-        </Card>
-        <Card>
-          <TopProduct>
-            <img src={topimg} alt=""/>
-          </TopProduct>
-          <Title>Adicolor Classics Joggers</Title>
-          <BottomProduct>
-              <p>Dress</p>
-              <p>$53.85</p>
-          </BottomProduct>
-        </Card>
-        <Card>
-          <TopProduct>
-            <img src={topimg} alt=""/>
-          </TopProduct>
-          <Title>Adicolor Classics Joggers</Title>
-          <BottomProduct>
-              <p>Dress</p>
-              <p>$53.85</p>
-          </BottomProduct>
-        </Card>
-        <Card>
-          <TopProduct>
-            <img src={topimg} alt=""/>
-          </TopProduct>
-          <Title>Adicolor Classics Joggers</Title>
-          <BottomProduct>
-              <p>Dress</p>
-              <p>$53.85</p>
-          </BottomProduct>
-        </Card>
-       
+
+      <GridContainer size={4} columngap={20} rowgap={30}>
+        {[...Array(8)].map((x,i) =>
+          <CardProduct product={product} key={i}/>
+        )}
       </GridContainer>
     </StyledGridProducts>
   )
@@ -107,20 +49,15 @@ export const GridProducts = () => {
 
 const StyledGridProducts = styled.div`
 width : ${v.contentWidth};
-height: ${v.grid.h};
+height: auto;
 border: 1px solid blue;
 margin: 0 auto;
 text-align: center;
+margin-bottom: 90px;
 `
 const FilterWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-`
-const GridContainer = styled.div`
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  column-gap: 20px;
-  row-gap: 30px;
 `
 const FilterButton = styled.div`
   display: flex;
@@ -128,21 +65,4 @@ const FilterButton = styled.div`
   background: black;
   color:white;
   align-items: center;
-`
-const Card = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-const TopProduct = styled.div`
-  img{
-    width: 100%;
-    height: 100%;
-  }
-`
-const BottomProduct = styled.div`
-  display: flex;
-  justify-content: space-between;
-`
-const Title = styled.h4`
-  text-align: left;
 `

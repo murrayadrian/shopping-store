@@ -6,19 +6,19 @@ import ShoppingIcon from "assets/shopping-icon.svg"
 export const Header = () => {
   return (
     <StyledHeader>
-      <div class="imageWrapper">
+      <div className="imageWrapper">
         <img src={SearchIcon} alt="img" />
       </div>
       <div style={{fontSize:"42px"}}>Vinh Store</div>
-      <div class="right-header">
+      <div className="right-header">
         <div className="account">
-          <div class="imageWrapper">
+          <div className="imageWrapper">
             <img src={AccountIcon} alt="img" />
           </div>
           <div>Account</div>
         </div>
         <div className="shopping">
-          <div class="imageWrapper">
+          <div className="imageWrapper">
             <img src={ShoppingIcon} alt="img" />
           </div>
           <div>Shopping</div>
