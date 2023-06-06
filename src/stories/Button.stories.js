@@ -1,39 +1,22 @@
-import { Button } from './Button';
+import { Button } from "components/Button";
 
-// More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
+
 export default {
-  title: 'Example/Button',
-  component: Button,
-  tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+    title: 'Components/Button',
+    component: Button,
 };
 
-// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary = {
-  args: {
-    primary: true,
-    label: 'Button',
-  },
-};
+const Template = (args) => <Button {...args}>Button</Button>;
 
-export const Secondary = {
-  args: {
-    label: 'Button',
-  },
-};
 
-export const Large = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
-};
+export const PrimaryButton = Template.bind({});
+PrimaryButton.args = {
+    background: 'red',
+    padding: "18px 26px"
+}
 
-export const Small = {
-  args: {
-    size: 'small',
-    label: 'Button',
-  },
-};
+export const BlackButton = {
+    args: {
+      background: "green"
+    },
+  };
