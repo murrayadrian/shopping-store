@@ -14,9 +14,3 @@ PrimaryButton.args = {
     background: 'red',
     padding: "18px 26px"
 }
-
-export const BlackButton = {
-    args: {
-      background: "green"
-    },
-  };
