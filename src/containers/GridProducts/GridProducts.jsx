@@ -13,11 +13,7 @@ const product = {
   category: "Dress",
   price: 53,
   qty: 50,
-  details : {
-    desc: "asdfdsgfdsfdsf",
-    tag: "hot",
-    tooltip: "hover meeeee"
-  }
+  tag: "hot"
 }
 
 

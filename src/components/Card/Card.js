@@ -1,16 +1,16 @@
 import styled from 'styled-components'
-import { StyledPopup } from './Popup'
+import { StyledToolTip } from './ToolTip'
 import { CardBottom } from "./CardBottom"
-import { SaleStatus } from "./SaleStatus"
-import { Popup } from "./Popup"
+import { ToolTip } from "./ToolTip"
+import { Tag } from './Tag'
 
 
 export const CardBanner = ({ product }) => {
   return (
     <StyledCard>
       <img src={product.image} alt="img" />
-      <SaleStatus isSale={product.isSale} />
-      <Popup name={product.name} qty={product.qty} />
+      <Tag tag={product.tag} />
+      <ToolTip name={product.name} qty={product.qty} />
     </StyledCard>
   )
 }
@@ -20,8 +20,8 @@ export const CardProduct = ({ product }) => {
     <SCardProduct>
       <StyledCard>
         <img src={product.image} alt="img" />
-        <SaleStatus isSale={product.isSale} />
-        <Popup />
+        <Tag tag={product.tag} />
+        <ToolTip />
       </StyledCard>
       <CardBottom product={product} />
     </SCardProduct>
@@ -30,7 +30,7 @@ export const CardProduct = ({ product }) => {
 
 const StyledCard = styled.div`
   position: relative;
-  &:hover ${StyledPopup} {
+  &:hover ${StyledToolTip} {
     display: flex;
   }
   img {

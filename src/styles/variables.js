@@ -8,27 +8,27 @@ export const v = {
         h : "59px",
     },
     topmain:{
-        h : "788px"
+        h : "auto"
     },
     brand:{
-        h: "70px"
+        h: "auto"
     },
     category:{
-        h: "648px"
+        h: "auto"
     },
     grid: {
         h: "1141px"
     },
     banner:{
-        h: "776px"
+        h: "auto"
     },
     slider:{
-        h: "639px"
+        h: "auto"
     },
     newsletter:{
-        h: "653px",
+        h: "auto",
     },
     footer:{
-        h:"355px"
+        h:"auto"
     }
 }

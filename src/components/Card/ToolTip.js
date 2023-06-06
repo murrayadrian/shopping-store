@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
-export const Popup = ({ name, qty }) => {
+export const ToolTip = ({ name, qty }) => {
     return (
-        <StyledPopup>
+        <StyledToolTip>
             {name && qty ?
                 <>
                     <div>{name}</div>
@@ -13,11 +13,11 @@ export const Popup = ({ name, qty }) => {
                     <div>shop now</div>
                 </>
             }
-        </StyledPopup>
+        </StyledToolTip>
     )
 }
 
-export const StyledPopup = styled.div`
+export const StyledToolTip = styled.div`
     position: absolute;
     display: none;
     bottom: 0;

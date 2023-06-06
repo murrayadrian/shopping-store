@@ -11,7 +11,7 @@ const product = {
   category: "Dress",
   price: 53,
   qty: 50,
-  isSale: true
+  tag: "sale"
 }
 
 const Container = styled(GridContainer)`

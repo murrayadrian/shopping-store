@@ -4,7 +4,7 @@ import styled from "styled-components"
 export const CardBottom = ({product}) => {
   return (
     <SCardBottom>
-        <h4 style={{textAlign:'left'}}>{product.name}</h4>
+        <Title style={{}}>{product.name}</Title>
         <ProductInfo>
             <p>{product.category}</p>
             <p>${product.price}</p>
@@ -19,4 +19,7 @@ const SCardBottom = styled.div`
 const ProductInfo = styled.div`
     display: flex;
     justify-content: space-between;
+`
+const Title = styled.h4`
+    text-align: left;
 `
