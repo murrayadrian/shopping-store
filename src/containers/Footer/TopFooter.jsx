@@ -1,6 +1,13 @@
+import styled from "styled-components"
+import { v } from "styles/variables"
+import { ReactComponent as Facebook } from "assets/facebook.svg";
+import { ReactComponent as Twitter } from "assets/twitter.svg";
+import { ReactComponent as Linkedin } from "assets/linkedin.svg";
+import { ReactComponent as Instagram } from "assets/instagram.svg";
+import { GridContainer } from "components/Common";
 export const TopFooter = () => {
     return (
-        <table style={{ textAlign: 'left',margin:'0 auto',marginTop:'90px', marginBottom:'90px' }}>
+        <STable>
             <thead>
                 <tr>
                     <th>VINH</th>
@@ -11,7 +18,7 @@ export const TopFooter = () => {
             </thead>
             <tbody>
                 <tr>
-                    <td rowSpan={3}>Lorem ipsum </td>
+                    <td rowSpan={4}>Lorem ipsum dolor </td>
                     <td>Necklaces</td>
                     <td>Our Producers</td>
                     <td>Contact Us</td>
@@ -27,19 +34,38 @@ export const TopFooter = () => {
                     <td>Product Care & Repair</td>
                 </tr>
                 <tr>
-                    <td>icon</td>
                     <td>t-shirt</td>
                     <td>About Us</td>
                     <td>Book an Appointment</td>
                 </tr>
                 <tr>
-                    <td>icon</td>
+                    <td>
+                        <GridContainer size={4}>
+                            <Facebook/>
+                            <Twitter/>
+                            <Linkedin/>
+                            <Instagram/>
+                        </GridContainer>
+                    </td>
                     <td>jacket</td>
                     <td>Terms & Conditions</td>
                     <td>Shipping & Returns</td>
                 </tr>
 
             </tbody>
-        </table>
+        </STable>
     )
 }
+const STable = styled.table`
+    text-align: left;
+    margin:0 auto;
+    width: ${v.contentWidth};
+    td, th {
+        padding: 8px;
+    }
+    svg{
+        width:20px;
+        height:20px;
+    }
+    padding: 100px 0;
+`

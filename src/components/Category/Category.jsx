@@ -16,9 +16,9 @@ const product = {
 
 export const Category = () => {
   return (
-    <Container size={2} columngap={24}>
+    <Container size={2} columngap={12}>
       <CardBanner product={product}></CardBanner>
-      <GridContainer size={2} rowgap={24} columngap={24}>
+      <GridContainer size={2} rowgap={12} columngap={12}>
         <CardBanner product={product}></CardBanner>
         <CardBanner product={product}></CardBanner>
         <CardBanner product={product}></CardBanner>
@@ -33,5 +33,5 @@ const Container = styled(GridContainer)`
   width : ${v.contentWidth};
   height: auto;
   margin: 0 auto;
-  margin-top: 90px;
+  
 `

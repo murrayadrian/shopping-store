@@ -22,7 +22,6 @@ const StyledBrandBanner = styled.div`
   width : ${v.containerWidth};
   position: relative;
   height: 100%;
-  border: 1px solid black;
   margin: 0 auto;
   text-align: left;
   img {

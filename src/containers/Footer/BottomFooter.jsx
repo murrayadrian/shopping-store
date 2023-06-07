@@ -29,4 +29,5 @@ const StyledBottomFooter = styled.div`
   display: flex;
   justify-content: space-between;
   color: white;
+
   `

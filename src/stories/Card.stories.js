@@ -1,26 +1,24 @@
 import { Card } from "components/Card";
-import Category2 from "assets/category-2.jpg"
-import { CardContainer } from "components/Card";
+import { CardGeneric } from "components/Card/Card";
+import { GridContainer } from "components/Common";
+import ig from "assets/brand-1.jpg";
+import { ToolTip } from "components/Card/ToolTip";
+import { Tag } from "components/Card/Tag";
+
 export default {
   title: "Components/Card",
-  component: Card,
+  component: CardGeneric,
 };
 
-
-const Template = (args) => (
-  <CardContainer>
-    <Card {...args}>Card</Card>;
-    <Card {...args}>Card</Card>;
-    <Card {...args}>Card</Card>;
-    <Card {...args}>Card</Card>;
-  </CardContainer>
-)
-
+const Template = () => (
+  <CardGeneric
+    top={
+      <>
+        <img src={ig} alt="img" />
+        <Tag tag="hot" />
+        <ToolTip name="vinh" qty={20} />
+      </>
+    }
+  />
+);
 export const category = Template.bind({});
-
-category.args = {
-  width: 50,
-  height: 50,
-  img : Category2,
-  isSale: false
-};

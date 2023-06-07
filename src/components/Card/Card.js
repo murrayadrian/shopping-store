@@ -6,6 +6,18 @@ import { Tag } from './Tag'
 import { FlexContainer } from 'components/Common'
 import instagram from 'assets/instagram.svg'
 import ns from 'assets/06.jpg'
+
+export const CardGeneric = ({top, bottom}) => {
+  <FlexContainer direction ="column">
+    <StyledCard>
+      {top}
+    </StyledCard>
+    {bottom}
+    ok
+  </FlexContainer>
+}
+
+
 export const CardBanner = ({ product }) => {
   return (
     <StyledCard>

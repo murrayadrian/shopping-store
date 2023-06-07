@@ -22,13 +22,12 @@ export const Newsletter = () => {
 
 
 const StyledNewsletter = styled.div`
-width : ${v.contentWidth};
-height: auto;
-background-color: ${v.secondaryBg};
-border: 1px solid red;
-margin: 0 auto;
-text-align: center;
-display: flex;
-flex-direction: column;
-margin-top: 20px;
+  width : ${v.contentWidth};
+  height: auto;
+  background-color: ${v.secondaryBg};
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0px;
 `

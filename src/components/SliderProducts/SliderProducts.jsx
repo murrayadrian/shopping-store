@@ -4,6 +4,15 @@ import topimg from "assets/slider-img.jpg"
 import { CardProduct } from "components/Card"
 import { FlexContainer, GridContainer } from "components/Common"
 
+const p =  {
+  id: 1,
+  image: topimg,
+  name: "Adicolor Classics Joggers",
+  category: "T-Shirt",
+  price: 53,
+  qty: 50,
+  tag: "hot",
+}
 const data = {
   "products": [
     {
@@ -22,7 +31,7 @@ const data = {
       category: "Hoodies",
       price: 53,
       qty: 50,
-      tag: "sale",
+      tag: "hot",
     },
     {
       id: 3,
@@ -31,7 +40,7 @@ const data = {
       category: "Jacket",
       price: 53,
       qty: 50,
-      tag: "hot",
+      tag: "sale",
     },
     {
       id: 4,
@@ -62,9 +71,10 @@ export const SliderProducts = () => {
         </FilterButton>
       </FlexContainer>
       <GridContainer size={4} columngap={20}>
-        {data.products.map((product, i) =>
-          <CardProduct key={i} product={product} />
-        )}
+          <CardProduct product={p} />
+          <CardProduct product={p} />
+          <CardProduct product={p} />
+          <CardProduct product={p} />
       </GridContainer>
     </StyledSliderProducts>
   )
@@ -73,10 +83,9 @@ export const SliderProducts = () => {
 const StyledSliderProducts = styled.div`
   width : ${v.contentWidth};
   height: auto;
-  border: 1px solid red;
   margin: 0 auto;
   text-align: center;
-  margin-top:90px;
+  padding: 100px 0px;
 `
 
 const FilterButton = styled.div`

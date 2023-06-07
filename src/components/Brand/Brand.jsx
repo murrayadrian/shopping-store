@@ -24,7 +24,7 @@ const StyledBrand = styled.div`
   text-align: center;
   display: flex;
   justify-content: space-between;
-  margin-top: 90px;
+  padding: 100px 0px;
   img{
     width: 160px;
   }

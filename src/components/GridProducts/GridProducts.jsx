@@ -44,12 +44,11 @@ export const GridProducts = () => {
 }
 
 const StyledGridProducts = styled.div`
-width : ${v.contentWidth};
-height: auto;
-border: 1px solid blue;
-margin: 0 auto;
-text-align: center;
-margin-bottom: 90px;
+  width : ${v.contentWidth};
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  padding: 100px 0px;
 `
 const FilterButton = styled.div`
   display: flex;

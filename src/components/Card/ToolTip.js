@@ -1,6 +1,6 @@
 import { FlexContainer } from "components/Common"
 import styled from "styled-components"
-import { ReactComponent as Shoping } from "assets/shopping-icon.svg";
+import { ReactComponent as Shoping } from "assets/shopping-bag.svg";
 
 export const ToolTip = ({ name, qty }) => {
     return (
@@ -36,6 +36,10 @@ export const StyledToolTip = styled.div`
     padding: 16px 12px;
     width: 100%;
     box-sizing: border-box;
+    svg{
+        width:20px;
+        height: 19px;
+    }
     .flex-hover {
         :hover {
         svg {

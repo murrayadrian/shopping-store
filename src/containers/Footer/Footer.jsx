@@ -14,7 +14,7 @@ export const Footer = () => {
 
 const StyledFooter = styled.div`
 width : 100%;
-background-color: ${v.secondaryBg};
+background-color: ${v.primaryBg};
 height: auto;
 margin: 0 auto;
 text-align: center;

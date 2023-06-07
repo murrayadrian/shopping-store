@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Tag = ({tag}) => {
   return (
     <Stag>
-      {tag && tag==="hot"?
+      {tag ==="hot"?
         <Hot>{tag}</Hot>:
         <Normal>{tag}</Normal>
       }
