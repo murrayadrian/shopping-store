@@ -1,2 +1,3 @@
 import { GridContainer } from "./GridContainer";
-export {GridContainer}
+import { FlexContainer } from "./FlexContainer";
+export {GridContainer, FlexContainer}

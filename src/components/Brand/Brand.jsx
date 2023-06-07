@@ -19,7 +19,7 @@ export const Brand = () => {
 
 const StyledBrand = styled.div`
   width : ${v.contentWidth};
-  height: ${v.brand.h};
+  height: auto;
   margin: 0 auto;
   text-align: center;
   display: flex;

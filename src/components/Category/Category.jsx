@@ -14,13 +14,6 @@ const product = {
   tag: "sale"
 }
 
-const Container = styled(GridContainer)`
-  width : ${v.contentWidth};
-  height: ${v.category.h};
-  margin: 0 auto;
-  margin-top: 90px;
-`
-
 export const Category = () => {
   return (
     <Container size={2} columngap={24}>
@@ -36,3 +29,9 @@ export const Category = () => {
 }
 
 
+const Container = styled(GridContainer)`
+  width : ${v.contentWidth};
+  height: auto;
+  margin: 0 auto;
+  margin-top: 90px;
+`

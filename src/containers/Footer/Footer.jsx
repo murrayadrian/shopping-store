@@ -13,8 +13,9 @@ export const Footer = () => {
 }
 
 const StyledFooter = styled.div`
-width : ${v.contentWidth};
-height: ${v.footer.h};
+width : 100%;
+background-color: ${v.secondaryBg};
+height: auto;
 margin: 0 auto;
 text-align: center;
 `

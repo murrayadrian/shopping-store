@@ -1,25 +1,19 @@
+import { FlexContainer } from "components/Common"
 import styled from "styled-components"
 
 
 export const CardBottom = ({product}) => {
   return (
-    <SCardBottom>
+    <FlexContainer direction="column">
         <Title style={{}}>{product.name}</Title>
-        <ProductInfo>
+        <FlexContainer justify="space-between">
             <p>{product.category}</p>
             <p>${product.price}</p>
-        </ProductInfo>
-    </SCardBottom>
+        </FlexContainer>
+    </FlexContainer>
   )
 }
-const SCardBottom = styled.div`
-    display: flex;
-    flex-direction: column;
-`
-const ProductInfo = styled.div`
-    display: flex;
-    justify-content: space-between;
-`
+
 const Title = styled.h4`
     text-align: left;
 `
