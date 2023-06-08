@@ -9,12 +9,12 @@ export const Newsletter = () => {
     <Container>
       <StyledNewsletter>
         <h2>Follow products and discounts on Instagram</h2>
-        <GridContainer size={6} columngap={20}>
+        <GridContainer size={6} columngap={20} margin='40px 0px'>
           {[...Array(6)].map((item, i) =>
             <CardInstagram key={i} />
           )}
         </GridContainer>
-        <h4>@vinh.official</h4>
+        <h4 style={{color:'red', fontSize:'24px'}}>@vinh.official</h4>
       </StyledNewsletter>
     </Container>
   )

@@ -24,7 +24,7 @@ export const TopFooter = () => {
                     <td>Contact Us</td>
                 </tr>
                 <tr>
-                    <td>hoodies</td>
+                    <td>Hoodies</td>
                     <td>Sitemap</td>
                     <td>Track Your Order</td>
                 </tr>
@@ -34,7 +34,7 @@ export const TopFooter = () => {
                     <td>Product Care & Repair</td>
                 </tr>
                 <tr>
-                    <td>t-shirt</td>
+                    <td>T-shirt</td>
                     <td>About Us</td>
                     <td>Book an Appointment</td>
                 </tr>
@@ -47,7 +47,7 @@ export const TopFooter = () => {
                             <Instagram/>
                         </GridContainer>
                     </td>
-                    <td>jacket</td>
+                    <td>Jacket</td>
                     <td>Terms & Conditions</td>
                     <td>Shipping & Returns</td>
                 </tr>
