@@ -21,7 +21,7 @@ const product = {
 export const Category = () => {
   return (
     <Container size={2} columngap={12}>
-      <CardGeneric
+      <CardGeneric className="abc"
         top={
           <StyledCardTop>
             <img src={product.image} alt="img" />
@@ -52,5 +52,7 @@ const Container = styled(GridContainer)`
   width : ${v.contentWidth};
   height: auto;
   margin: 0 auto;
-  
+  .abc {
+    background-color: red;
+  }
 `
