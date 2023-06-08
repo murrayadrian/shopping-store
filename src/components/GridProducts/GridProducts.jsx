@@ -28,14 +28,13 @@ export const GridProducts = () => {
 
       <GridContainer size={4} columngap={20} rowgap={30}>
         {[...Array(8)].map((x,i) =>
-          // <CardProduct product={product} key={i}/>
           <CardGeneric
             key={i}
             top={
               <>
                 <img src={product.image} alt="img" />
                 <Tag tag={product.tag} />
-                <ToolTip name={product.name} qty={product.qty} />
+                <ToolTip/>
               </>
             }
             bottom={<CardBottom product={product}/>}

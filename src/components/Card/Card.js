@@ -5,14 +5,15 @@ import instagram from 'assets/instagram.svg'
 import ns from 'assets/06.jpg'
 
 export const CardGeneric = ({ top, bottom }) => {
-  return<>
+  return(
+  <>
     {top && bottom ?
       <FlexContainer direction="column">
         <StyledCardTop>
           {top}
         </StyledCardTop>
         {bottom}
-      </FlexContainer> :
+      </FlexContainer>:
       <>
         <StyledCardTop>
           {top}
@@ -21,6 +22,7 @@ export const CardGeneric = ({ top, bottom }) => {
       </>
     }
   </>
+  )
 }
 
 export const CardInstagram = () => {
