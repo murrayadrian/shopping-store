@@ -1,2 +1,2 @@
-import {Button} from "./Button"
-export {Button}
+import {LinkButton} from "./Button"
+export {LinkButton}

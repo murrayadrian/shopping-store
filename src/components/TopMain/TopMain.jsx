@@ -14,7 +14,7 @@ export const TopMain = () => {
             <h2 style={{ fontSize: '50px' }}>Collections</h2>
             <p>You can explore ans shop many differnt collection
               from various barands here.</p>
-            <ButtonContainer gap={10} bg="black">
+            <ButtonContainer justify='center'gap={10} bg="black">
               <Shoping fill="white" />
               <div>Shop Now</div>
             </ButtonContainer>
@@ -35,6 +35,7 @@ const StyledTopMain = styled.div`
   padding: 100px 0px;
 `
 const ButtonContainer = styled(FlexContainer)`
+  align-items: center;
   padding: 8px 12px;
   width: 150px;
   color:white;
