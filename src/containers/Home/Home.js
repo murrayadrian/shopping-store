@@ -5,14 +5,11 @@ import { GridProducts } from "components/GridProducts"
 import { Newsletter } from "components/Newsletter"
 import { SliderProducts } from "components/SliderProducts"
 import { TopMain } from "components/TopMain"
-import { Footer } from "containers/Footer"
-import { Header } from "containers/Header"
 
 
 export const Home = () => {
     return (
         <>
-            <Header />
             <TopMain />
             <Brand />
             <Category />
@@ -20,7 +17,7 @@ export const Home = () => {
             <BrandBanner />
             <SliderProducts />
             <Newsletter />
-            <Footer />
+
         </>
     )
 }

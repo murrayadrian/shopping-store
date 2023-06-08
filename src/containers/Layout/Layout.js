@@ -1,7 +1,12 @@
+import { Footer } from "containers/Footer"
+import { Header } from "containers/Header"
 
-
-export const Layout = () => {
+export const Layout = ({children}) => {
   return (
-    <div>Layout</div>
+    <>
+    <Header/>
+    {children}
+    <Footer/>
+    </>
   )
 }

@@ -4,8 +4,7 @@ export const Tag = ({tag}) => {
   return (
     <Stag>
       {tag ==="hot"?
-        <Hot>{tag}</Hot>:
-        <Normal>{tag}</Normal>
+        <Label bg='red'>{tag}</Label> : <Label>{tag}</Label>
       }
     </Stag>
   )
@@ -21,13 +20,8 @@ const Stag = styled.div`
     padding: 2px 8px;
   }
 `
-const Hot = styled.div`
-  background-color: red;
-  color: white;
-  padding: 3px 8px;
-`
-const Normal = styled.div`
-  background-color: black;
+const Label = styled.div`
+  background-color: ${props=>props.bg || 'black'};
   color: white;
   padding: 3px 8px;
 `
