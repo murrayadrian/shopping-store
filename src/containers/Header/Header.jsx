@@ -11,14 +11,14 @@ export const Header = () => {
         <div className="imageWrapper">
           <img src={SearchIcon} alt="img" />
         </div>
-        <div style={{ fontSize: "42px" }}>Vinh Store</div>
+        <div style={{ fontSize: "42px", alignSelf:'right'}}>Vinh Store</div>
         <div className="right-header">
           <div className="account">
-            <div><Account/></div>
+            <div><Account /></div>
             <div>Account</div>
           </div>
-          <div className="shopping"> 
-            <div><ShoppingBag/></div>
+          <div className="shopping">
+            <div><ShoppingBag /></div>
             <div>Shopping</div>
           </div>
         </div>
@@ -35,7 +35,8 @@ const StyledHeader = styled.div`
   justify-content: space-between;
   svg{
     width:20px;
-    height: 19px;
+    height: 20px;
+    vertical-align: middle;
   }
   line-height: 59px;
   .right-header{
@@ -45,6 +46,15 @@ const StyledHeader = styled.div`
     .account, .shopping {
       display: flex;
       gap: 10.5px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      :hover {
+        svg {
+            fill: #FF6F61;   
+        }
+        color: #FF6F61;
+        }
     }
   }
 `
