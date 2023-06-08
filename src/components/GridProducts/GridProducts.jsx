@@ -7,6 +7,7 @@ import { Tag } from "components/Card/Tag"
 import { ToolTip } from "components/Card/ToolTip"
 import { CardBottom } from "components/Card/CardBottom"
 import { FilterMenu } from "components/FilterMenu"
+import { StyledCardTop } from "components/Card/Card"
 
 
 const product = {
@@ -31,11 +32,11 @@ export const GridProducts = () => {
           <CardGeneric
             key={i}
             top={
-              <>
+              <StyledCardTop>
                 <img src={product.image} alt="img" />
                 <Tag tag={product.tag} />
                 <ToolTip/>
-              </>
+              </StyledCardTop>
             }
             bottom={<CardBottom product={product}/>}
           />

@@ -1,17 +1,13 @@
 import styled from 'styled-components'
 import { StyledToolTip } from './ToolTip'
 import { FlexContainer } from 'components/Common'
-import instagram from 'assets/instagram.svg'
-import ns from 'assets/06.jpg'
 
 export const CardGeneric = ({ top, bottom }) => {
   return(
   <>
     {top && bottom ?
       <FlexContainer direction="column">
-        <StyledCardTop>
-          {top}
-        </StyledCardTop>
+        {top}
         {bottom}
       </FlexContainer>:
       <>
@@ -25,16 +21,7 @@ export const CardGeneric = ({ top, bottom }) => {
   )
 }
 
-export const CardInstagram = () => {
-  return (
-    <SCardInstagram>
-      <img src={ns} alt="" />
-      <img className="instaImg" src={instagram} alt="" />
-    </SCardInstagram>
-  )
-}
-
-const SCardInstagram = styled.div`
+export const SCardInstagram = styled.div`
   position: relative;
   img {
     width: 100%;
@@ -54,7 +41,7 @@ const SCardInstagram = styled.div`
   }
 `
 
-const StyledCardTop = styled.div`
+export const StyledCardTop = styled.div`
   position: relative;
   &:hover ${StyledToolTip} {
     display: flex;

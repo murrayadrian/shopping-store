@@ -5,6 +5,7 @@ import { GridContainer } from "components/Common"
 import { CardGeneric } from "components/Card"
 import { ToolTip } from "components/Card/ToolTip"
 import { Tag } from "components/Card/Tag"
+import { StyledCardTop } from "components/Card/Card"
 
 
 const product = {
@@ -22,11 +23,11 @@ export const Category = () => {
     <Container size={2} columngap={12}>
       <CardGeneric
         top={
-          <>
+          <StyledCardTop>
             <img src={product.image} alt="img" />
             <Tag tag={product.tag} />
             <ToolTip name={product.name} qty={product.qty} />
-          </>
+          </StyledCardTop>
         }
       />
       <GridContainer size={2} rowgap={12} columngap={12}>
@@ -34,11 +35,11 @@ export const Category = () => {
           <CardGeneric
             key={i}
             top={
-              <>
+              <StyledCardTop>
                 <img src={product.image} alt="img" />
                 <Tag tag={product.tag} />
                 <ToolTip name={product.name} qty={product.qty} />
-              </>
+              </StyledCardTop>
             }
           />
         )}
