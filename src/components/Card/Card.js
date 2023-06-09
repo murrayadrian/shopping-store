@@ -6,7 +6,7 @@ export const CardGeneric = ({ top, bottom }) => {
   return(
   <>
     {top && bottom ?
-      <FlexContainer direction="column">
+      <FlexContainer direction="column" gap={5}>
         {top}
         {bottom}
       </FlexContainer>:

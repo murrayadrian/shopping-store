@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 export const CardBottom = ({product}) => {
   return (
-    <FlexContainer direction="column">
+    <FlexContainer direction="column" gap={10}>
         <Title>{product.name}</Title>
         <FlexContainer justify="space-between">
             <p>{product.category}</p>

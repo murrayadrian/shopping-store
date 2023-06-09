@@ -1,13 +1,23 @@
 import styled from 'styled-components'
 
-export const Tag = ({tag}) => {
-  return (
-    <Stag>
-      {tag ==="hot"?
-        <Label bg='red'>{tag.toUpperCase()}</Label> : <Label>{tag.toUpperCase()}</Label>
-      }
-    </Stag>
-  )
+export const Tag = ({ tag }) => {
+  if (tag != null && tag != "") {
+    if (tag == "hot") {
+      return (
+        <Stag>
+          <Label bg="red">{tag.toUpperCase()}</Label>
+        </Stag>
+      )
+    } else {
+      return (
+        <Stag>
+          <Label>{tag.toUpperCase()}</Label>
+        </Stag>
+      )
+    }
+  } else {
+    return;
+  }
 }
 
 const Stag = styled.div`
@@ -21,7 +31,7 @@ const Stag = styled.div`
   }
 `
 const Label = styled.div`
-  background-color: ${props=>props.bg || 'black'};
+  background-color: ${props => props.bg || 'black'};
   color: white;
   width: 52px;
   height:24px;
