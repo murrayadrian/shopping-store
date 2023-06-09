@@ -4,6 +4,7 @@ import pic from "assets/category-1.jpg"
 import { FlexContainer, GridContainer } from "components/Common"
 import { Container } from "components/Common/Container"
 import { ReactComponent as Shopping } from "assets/shopping-icon.svg";
+import ImgProduct from "assets/image-product.png"
 
 export const Hero = () => {
   return (
@@ -44,13 +45,13 @@ const ButtonContainer = styled(FlexContainer)`
 const ImageContainer = styled.div`
   width: 424px;
   height: 542px;
-  background-image: url(${pic});
+  background-image: url(${ImgProduct});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 100px 0px 100px 0px;
   position:relative;
-  :after {
+  /* :after {
     content:"";
     position:absolute;
     top: 20px;
@@ -59,7 +60,7 @@ const ImageContainer = styled.div`
     height: 542px;
     border: 2px solid black;
     border-radius: 100px 0px 100px 0px;
-  }
+  } */
 `
 const Title = styled.h2`
   font-size: 74px;
