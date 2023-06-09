@@ -18,8 +18,10 @@ const product = {
   tag: "sale"
 }
 
-export const Category = () => {
+export const Popular = () => {
   return (
+    <AsideContainer>
+    <h3>EXPLORE NEW AND POPULAR STYLES</h3>
     <Container justify="space-between">
       <CardGeneric
         top={
@@ -29,27 +31,45 @@ export const Category = () => {
             <ToolTip name={product.name} qty={product.qty} />
           </StyledCardTop>
         }
-      />
+        />
       <GridContainer size={2} rowgap={24} columngap={24}>
         {[...Array(4)].map((x, i) =>
           <CardGeneric
-            key={i}
-            top={
+          key={i}
+          top={
               <StyledCardTop w={312} h="312px" >
                 <img src={product.image} alt="img" />
                 <Tag tag={product.tag} />
                 <ToolTip name={product.name} qty={product.qty} />
               </StyledCardTop>
             }
-          />
-        )}
+            />
+            )}
       </GridContainer>
     </Container>
+    </AsideContainer>
   )
 }
 
 
-
+const AsideContainer = styled.div`
+  position:relative;
+  display: block;
+  h3{
+    position: absolute;
+    bottom:-40px;
+    left: calc((100% - ${v.contentWidth})/2 - 40px);
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+    background: #FFFFFF;
+    color: black;
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 400;
+    width:648px;
+    text-align: left;
+  }
+`
 const Container = styled(FlexContainer)`
  width: ${v.contentWidth};
  height: 648px;

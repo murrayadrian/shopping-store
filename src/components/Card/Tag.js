@@ -4,7 +4,7 @@ export const Tag = ({tag}) => {
   return (
     <Stag>
       {tag ==="hot"?
-        <Label bg='red'>{tag}</Label> : <Label>{tag}</Label>
+        <Label bg='red'>{tag.toUpperCase()}</Label> : <Label>{tag.toUpperCase()}</Label>
       }
     </Stag>
   )
@@ -23,5 +23,7 @@ const Stag = styled.div`
 const Label = styled.div`
   background-color: ${props=>props.bg || 'black'};
   color: white;
-  padding: 3px 8px;
+  width: 52px;
+  height:24px;
+  padding: 4px;
 `
