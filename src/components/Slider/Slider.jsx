@@ -19,9 +19,9 @@ const product = {
   tag: "hot",
 }
 
-export const SliderProducts = () => {
+export const Slider = () => {
   return (
-    <StyledSliderProducts>
+    <StyledSlider>
       <h2>Best Sellers</h2>
       <FilterMenu categories={['T-shirt', 'Hoodies', 'Jacket']} title='Show All' />
       <GridContainer size={4} columngap={20}>
@@ -39,11 +39,11 @@ export const SliderProducts = () => {
           />
         )}
       </GridContainer>
-    </StyledSliderProducts>
+    </StyledSlider>
   )
 }
 
-const StyledSliderProducts = styled.div`
+const StyledSlider = styled.div`
   width : ${v.contentWidth};
   height: auto;
   margin: 0 auto;

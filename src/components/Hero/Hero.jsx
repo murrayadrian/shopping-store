@@ -12,11 +12,11 @@ export const Hero = () => {
         <GridContainer size={2}>
           <FlexContainer direction="column" gap={30} align="center">
             <Title>Collections</Title>
-            <p style={{lineHeight:'40px'}}>You Can Explore Ans Shop Many Differnt Collection<br/>
+            <p style={{fontWeight: 400,fontSize: '30px'}}>You Can Explore Ans Shop Many Differnt Collection<br/>
               From Various Barands Here.</p>
             <ButtonContainer justify='center'gap={10} bg="black">
               <Shopping fill="white" />
-              <div>Shop Now</div>
+              <div style={{fontWeight:400, fontSize:'29px'}}>Shop Now</div>
             </ButtonContainer>
           </FlexContainer>
           <ImageContainer/>
@@ -34,21 +34,20 @@ const StyledHero = styled.div`
 `
 const ButtonContainer = styled(FlexContainer)`
   align-items: center;
-  padding: 8px 12px;
-  width: 150px;
+  padding: 19px 26px;
+  width: 223px;
   color:white;
   :hover{
     background-color: red;
   }
 `
 const ImageContainer = styled.div`
-  width: 324px;
-  height: 442px;
+  width: 424px;
+  height: 542px;
   background-image: url(${pic});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: red;
   border-radius: 100px 0px 100px 0px;
   position:relative;
   :after {
@@ -56,12 +55,13 @@ const ImageContainer = styled.div`
     position:absolute;
     top: 20px;
     right: -20px;
-    width: 324px;
-    height: 442px;
+    width: 424px;
+    height: 542px;
     border: 2px solid black;
     border-radius: 100px 0px 100px 0px;
   }
 `
 const Title = styled.h2`
-  font-size: 50px;
+  font-size: 74px;
+  font-weight: 300;
 `

@@ -6,4 +6,5 @@ export const GridContainer = styled.div`
     column-gap: ${props=>props.columngap}px;
     row-gap: ${props=>props.rowgap}px;
     margin: ${props=>props.margin};
+    height: ${props=>props.height};
 `

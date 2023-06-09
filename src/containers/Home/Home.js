@@ -3,7 +3,7 @@ import { BrandBanner } from "components/BrandBanner"
 import { Category } from "components/Category"
 import { GridProducts } from "components/GridProducts"
 import { Newsletter } from "components/Newsletter"
-import { SliderProducts } from "components/SliderProducts"
+import { Slider } from "components/Slider"
 import { Hero } from "components/Hero"
 
 
@@ -15,7 +15,7 @@ export const Home = () => {
             <Category />
             <GridProducts />
             <BrandBanner />
-            <SliderProducts />
+            <Slider />
             <Newsletter />
 
         </>

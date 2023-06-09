@@ -26,6 +26,7 @@ const StyledBrand = styled.div`
   justify-content: space-between;
   padding: 100px 0px;
   img{
-    width: 160px;
+    width: 200px;
+    height: 70px
   }
 `

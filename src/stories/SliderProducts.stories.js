@@ -1,4 +1,4 @@
-import { SliderProducts } from "components/SliderProducts";
+import { SliderProducts } from "components/Slider";
 
 export default {
     title: "Components/Sliders",

@@ -43,7 +43,9 @@ export const SCardInstagram = styled.div`
 
 export const StyledCardTop = styled.div`
   position: relative;
-  height: 100%;
+  height: ${props=>props.h};
+  width: ${props => props.w}px;
+  box-sizing: border-box;
   &:hover ${StyledToolTip} {
     display: flex;
   }

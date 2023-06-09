@@ -4,7 +4,7 @@ import styled from "styled-components"
 export const FilterMenu = ({categories, title}) => {
     return (
         <>
-            <FlexContainer justify="space-between">
+            <MenuContainer justify="space-between">
                 <GridContainer size={4} columngap={20}>
                     <div>All products</div>
                     {categories.map((category, i) =>
@@ -12,11 +12,15 @@ export const FilterMenu = ({categories, title}) => {
                     )}
                 </GridContainer>
                 <ActionButton>{title}</ActionButton>
-            </FlexContainer>
+            </MenuContainer>
         </>
     )
 }
 
+const MenuContainer = styled(FlexContainer)`
+  align-items: center;
+  margin-bottom: 10px;
+`
 const ActionButton = styled.div`
   color:white;
   background-color: black;

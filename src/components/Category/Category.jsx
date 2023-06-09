@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { v } from "styles/variables"
 import cate2 from "assets/category-2.jpg"
-import { GridContainer } from "components/Common"
+import { FlexContainer, GridContainer } from "components/Common"
 import { CardGeneric } from "components/Card"
 import { ToolTip } from "components/Card/ToolTip"
 import { Tag } from "components/Card/Tag"
@@ -20,22 +20,22 @@ const product = {
 
 export const Category = () => {
   return (
-    <Container size={2} columngap={12}>
-      <CardGeneric className="abc"
+    <Container justify="space-between">
+      <CardGeneric
         top={
-          <StyledCardTop>
+          <StyledCardTop h="100%">
             <img src={product.image} alt="img" />
             <Tag tag={product.tag} />
             <ToolTip name={product.name} qty={product.qty} />
           </StyledCardTop>
         }
       />
-      <GridContainer size={2} rowgap={12} columngap={12}>
+      <GridContainer size={2} rowgap={24} columngap={24}>
         {[...Array(4)].map((x, i) =>
           <CardGeneric
             key={i}
             top={
-              <StyledCardTop>
+              <StyledCardTop w={312} h="312px" >
                 <img src={product.image} alt="img" />
                 <Tag tag={product.tag} />
                 <ToolTip name={product.name} qty={product.qty} />
@@ -48,11 +48,10 @@ export const Category = () => {
   )
 }
 
-const Container = styled(GridContainer)`
-  width : ${v.contentWidth};
-  height: auto;
-  margin: 0 auto;
-  .abc {
-    background-color: red;
-  }
+
+
+const Container = styled(FlexContainer)`
+ width: ${v.contentWidth};
+ height: 648px;
+ margin: 0 auto;
 `
