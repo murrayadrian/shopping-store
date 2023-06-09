@@ -1,7 +1,5 @@
 import styled from "styled-components"
-import { v } from "styles/variables"
 import brandBg from "assets/banner-bg.jpg"
-import zara from "assets/zara-logo.png"
 import { FlexContainer } from "components/Common"
 export const BrandBanner = () => {
   return (

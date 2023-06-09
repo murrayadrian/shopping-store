@@ -40,7 +40,7 @@ export const TopFooter = () => {
                 </tr>
                 <tr>
                     <td>
-                        <GridContainer size={4}>
+                        <GridContainer size={4} width="200px">
                             <Facebook/>
                             <Twitter/>
                             <Linkedin/>
@@ -68,4 +68,10 @@ const STable = styled.table`
         height:20px;
     }
     padding: 100px 0;
+    tr {
+        margin-right: 30px;
+    }
+    td {
+        cursor: pointer;
+    }
 `

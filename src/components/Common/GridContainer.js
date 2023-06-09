@@ -7,4 +7,5 @@ export const GridContainer = styled.div`
     row-gap: ${props=>props.rowgap}px;
     margin: ${props=>props.margin};
     height: ${props=>props.height};
+    width: ${props=>props.width}
 `

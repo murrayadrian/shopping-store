@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Tag = ({ tag }) => {
-  if (tag != null && tag != "") {
-    if (tag == "hot") {
+  if (tag !== null && tag !== "") {
+    if (tag === "hot") {
       return (
         <Stag>
           <Label bg="red">{tag.toUpperCase()}</Label>

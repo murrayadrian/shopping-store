@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { v } from "styles/variables"
-import pic from "assets/category-1.jpg"
 import { FlexContainer, GridContainer } from "components/Common"
 import { Container } from "components/Common/Container"
 import { ReactComponent as Shopping } from "assets/shopping-icon.svg";
@@ -51,16 +50,6 @@ const ImageContainer = styled.div`
   background-position: center;
   border-radius: 100px 0px 100px 0px;
   position:relative;
-  /* :after {
-    content:"";
-    position:absolute;
-    top: 20px;
-    right: -20px;
-    width: 424px;
-    height: 542px;
-    border: 2px solid black;
-    border-radius: 100px 0px 100px 0px;
-  } */
 `
 const Title = styled.h2`
   font-size: 74px;

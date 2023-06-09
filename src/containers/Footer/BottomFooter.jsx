@@ -1,8 +1,8 @@
 import styled from "styled-components"
 import { v } from "styles/variables"
-import icon from "assets/filter-icon.svg"
 import iconpayment from "assets/icons_payment.jpg"
 import { FlexContainer, GridContainer } from "components/Common"
+import {ReactComponent as ArrowUp} from "assets/arrow-upward.svg"
 
 export const BottomFooter = () => {
   return (
@@ -13,8 +13,8 @@ export const BottomFooter = () => {
           <img src={iconpayment} alt="img" />
         </GridContainer>
         <FlexContainer gap={10}>
-          <div>Send To Top</div>
-          <div><img src={icon} alt="img" /></div>
+          <div style={{cursor:'pointer'}}>Send To Top</div>
+          <ArrowUp style={{width:'20px',height:'20px', fill:"white",cursor:'pointer'}}/>
         </FlexContainer>
       </StyledBottomFooter>
     </div>
@@ -29,5 +29,4 @@ const StyledBottomFooter = styled.div`
   display: flex;
   justify-content: space-between;
   color: white;
-
-  `
+`
