@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { StyledToolTip } from './ToolTip'
 import { FlexContainer } from 'components/Common'
+import PropTypes from 'prop-types';
 
 export const CardGeneric = ({ top, bottom }) => {
   return(
@@ -20,6 +21,37 @@ export const CardGeneric = ({ top, bottom }) => {
   </>
   )
 }
+
+export const Card = ((props) => {
+  const {
+    className,
+    headStyle = {},
+    title,
+    extra,
+    bodyStyle = {},
+    children,
+    ...others
+  } = props;
+
+  const body = (
+    <div>{children}</div>
+  )
+  return (
+    <div>
+      {body}
+    </div>
+  )
+})
+Card.propTypes = {
+  className: PropTypes.string,
+  title: PropTypes.node,
+  extra: PropTypes.node,
+  cover: PropTypes.node,
+  children: PropTypes.node
+}
+
+
+
 
 export const SCardInstagram = styled.div`
   position: relative;
